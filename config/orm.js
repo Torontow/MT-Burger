@@ -1,4 +1,4 @@
-const connection = require('connection');
+const connection = require('./connection.js');
 
 // Helper function for SQL syntax
 const printQuestionMarks = (num) => {
@@ -37,12 +37,21 @@ const printQuestionMarks = (num) => {
 
 const orm = {
 
+    // Gets all burgers from database.
+    selectAll(tableInput, cb) {
+            const queryString = `SELECT * FROM ${tableInput};`;
+            connection.query(queryString, (err, result) => {
+                if (err) {
+                    throw err;
+                }
+                cb(result);
+            });
+    }
 
-
-// selectAll()
-
+    // Creates a burger in the database.
 // InsertOne();
 
+    // Updates a burger in the database.
 // updateOne();
 
 }
