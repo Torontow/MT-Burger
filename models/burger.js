@@ -12,7 +12,7 @@ const burger = {
 
   // CREATE new burger orm function.
   insertOne(cols, vals, cb) {
-      orm.insertOne('burgers', cols, vals, (res) => (res));
+      orm.insertOne('burgers', cols, vals, (res) => cb(res));
   },
   // UPDATE burger status orm function.
 }
