@@ -17,6 +17,11 @@ router.get('/', (req, res) => {
 
 // Post Router
 
+router.post('/api/burgers', (req, res) => {
+    burger.insertOne('burger_name', req.body.name, (result) => {
+        res.json({ id: result.insertId });
+    })
+})
 // Update Router
 
 
