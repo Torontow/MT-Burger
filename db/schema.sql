@@ -9,5 +9,5 @@ create table burgers (
     burger_name varchar(40),
     devoured boolean default false,
     primary key (id)
-)
+);
 
