@@ -1,4 +1,4 @@
-insert into burgers values
-    ('Slow Roasted Lamb Belly Burger', false),
-    ('Maple-Bacon-Wrapped Burger', false),
-    ('They Juicy Floozy,' false)
+insert into burgers (burger_name) values
+    ('Slow Roasted Lamb Belly Burger'),
+    ('Maple-Bacon-Wrapped Burger'),
+    ('They Juicy Floozy,')
