@@ -7,6 +7,6 @@ use database burgers_db;
 create table burgers (
     id int not null auto_increment,
     burger_name varchar(40),
-    devoured tinyint(0)
+    devoured boolean
 )
 
