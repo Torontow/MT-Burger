@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row align-items-start">
+
+        <!--Column which displays all burgers currenly in database.-->
+        <div class="col-4">
+            <h2>My Menu</h2>
+
+            <ul>
+                {{#each burgers}}
+                {{> burgers/burger-block}}
+                {{/each}}
+            </ul>
+        
+        </div>
+
+        <!--Column which shows burger image and option to add burgers to my menu.-->
+        <div class="col-4">
+            <img src="./public/assets/burger.png">
+            <h1>Eat-Da-Burger!</h1>
+            <p>SOOOO many different burgers out there! Keep track of the ones you want, AND the ones you've tried!</p>
+            <form id="add-form">
+
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="ca" name="name" placeholder="Whatcha wanna eat?">
+                </div>
+
+                <button type="submit">Add Burger</button>
+            </form>
+        </div>
+
+        <!--Column which contains burgers user has tried.-->
+        <div class="col-4">
+            <h2>What I Ate</h2>
+        </div>
+    </div>
+</div>
