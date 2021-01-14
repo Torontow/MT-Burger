@@ -51,8 +51,8 @@ const orm = {
 
   insertOne (table, cols, vals, cb) {
     // INSERT INTO burgers (burger_name) VALUES ('some burger name');
-    let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (?)`;
-    
+    let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (?,?)`
+
     // let queryString = `INSERT INTO ${table}`
 
     // queryString += ' ('
@@ -70,10 +70,27 @@ const orm = {
       }
       cb(result)
     })
+  },
+
+  // Updates a burger in the database.
+  updateOne (table, objColVals, condition, cb) {
+    // update burgers set devoured = true where id = id
+    let queryString = `UPDATE ${table}`
+
+    queryString += ' SET '
+    queryString += objToSql(objColVals)
+    queryString += ' WHERE '
+    queryString += condition
+
+    console.log(queryString)
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err
+      }
+
+      cb(result)
+    })
   }
 }
-
-// Updates a burger in the database.
-// updateOne();
 
 module.exports = orm
