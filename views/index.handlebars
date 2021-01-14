@@ -7,7 +7,9 @@
 
             <ul>
                 {{#each burgers}}
+                {{#unless devoured}}
                 {{> burgers/burger-block}}
+                {{/unless}}
                 {{/each}}
             </ul>
         
