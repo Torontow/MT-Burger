@@ -27,3 +27,11 @@ h4 {
     width: 50%;
 }
 
+li {
+    padding: 10px;
+}
+
+.form-group {
+    text-align: center;
+}
+
