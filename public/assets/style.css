@@ -1,0 +1,18 @@
+body {
+    background-color: goldenrod;
+    font-family: 'Neucha',cursive;
+    font-size: large;
+}
+
+h1 {
+    font-family: 'Frijole', cursive;
+    color: brown;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    color:green;
+    text-align: center;
+}
+
