@@ -3,5 +3,5 @@ insert into burgers (burger_name) values
     ('Maple-Bacon-Wrapped Burger'),
     ('The Juicy Floozy');
 
-insert into burgers (name, devoured) values
+insert into burgers (burger_name, devoured) values
     ('Chicken Burger', true)
