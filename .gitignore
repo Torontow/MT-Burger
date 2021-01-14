@@ -1,2 +1,4 @@
 /node_modules
 /views/layouts/index.html
+/.DS_Store
+/public/.DS_Store
