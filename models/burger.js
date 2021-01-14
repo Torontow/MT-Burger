@@ -15,6 +15,11 @@ const burger = {
       orm.insertOne('burgers', cols, vals, (res) => cb(res));
   },
   // UPDATE burger status orm function.
+
+  updateOne(objColVals, condition, cb) {
+    orm.updateOne('burgers', objColVals, condition, (res) => cb(res));
+    console.log(updateOne);
+  }
 }
 
 module.exports = burger
