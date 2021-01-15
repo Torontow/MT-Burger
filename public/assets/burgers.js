@@ -42,10 +42,9 @@ document.addEventListener('DOMContentLoaded', event => {
     devourItBtn.forEach(button => {
       button.addEventListener('click', e => {
         const id = e.target.getAttribute('data-id')
-        const eaten = e.target.getAttribute('data-willEat')
-        console.log(eaten)
+        
         const newDevouredState = {
-          devoured: eaten
+          devoured: true
         }
         fetch(`/api/burgers/${id}`, {
           method: 'PUT',
