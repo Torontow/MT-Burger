@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', event => {
       }
       console.log(newBurger)
       // Send POST request to create new burger
-      fetch('http://localhost:3000/api/burgers/', {
+      fetch('/api/burgers', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
