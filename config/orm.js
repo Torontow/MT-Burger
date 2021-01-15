@@ -1,17 +1,6 @@
 const { query } = require('./connection.js')
 const connection = require('./connection.js')
 
-// Helper function for SQL syntax
-const printQuestionMarks = num => {
-  const arr = []
-
-  for (let i = 0; i < num; i++) {
-    arr.push('?')
-  }
-
-  return arr.toString()
-}
-
 // Helper function to convert object key/value pairs to SQL syntax
 const objToSql = ob => {
   const arr = []
@@ -21,12 +10,9 @@ const objToSql = ob => {
     let value = ob[key]
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
       if (typeof value === 'string' && value.indexOf(' ') >= 0) {
         value = `'${value}'`
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(`${key}=${value}`)
     }
   }
@@ -51,16 +37,7 @@ const orm = {
 
   insertOne (table, cols, vals, cb) {
     // INSERT INTO burgers (burger_name) VALUES ('some burger name');
-    let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (?,?)`
-
-    // let queryString = `INSERT INTO ${table}`
-
-    // queryString += ' ('
-    // queryString += cols.toString()
-    // queryString += ') '
-    // queryString += 'VALUES ('
-    // queryString += printQuestionMarks(vals.length)
-    // queryString += ') '
+    let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (?)`
 
     console.log(queryString)
 
