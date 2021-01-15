@@ -25,6 +25,8 @@ When you go to the site, you'll see a field in the middle where you and add what
 
 ## Contributing
 
+Big kudos to Annie Kwan [https://github.com/akwanmtl](https://github.com/akwanmtl) helped immensely with this project as I was under a deadline and she found (VERY quickly) a tiny error that was causing a major malfunction.
+
 If you would like to contribute to this project, please contact me with the information below. You are incouraged to follow the [Contributor Covenant](https://www.contributor-covenant.org/). 
 
 ## Tests
